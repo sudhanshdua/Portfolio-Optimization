@@ -115,7 +115,7 @@ def kurtosis(rets):
 
 
 
-def sharpe_ratio(rets, rfr, N):
+def sharpe_ratio(rets, rfr, periods_per_year):
     """
     Computes the annualized sharpe ratio for a set of returns
     
