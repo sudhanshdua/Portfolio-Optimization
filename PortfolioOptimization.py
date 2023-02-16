@@ -115,7 +115,7 @@ def kurtosis(rets):
 
 
 
-def sharpe_ratio(rets, rfr, periods_per_year):
+def sharpe_ratio(rets, rfr, N):
     """
     Computes the annualized sharpe ratio for a set of returns
     
@@ -125,7 +125,7 @@ def sharpe_ratio(rets, rfr, periods_per_year):
         N    - No. of periods per year (for example: N = 12 for a monthly return data)
     """
     # risk-free rate(per period) = [(1 + risk-free rate(annual))^(1 / no. of periods)] - 1
-    rf_per_period= (1+ rfr)**(1/periods_per_year)-1
+    rf_per_period= (1+ rfr)**(1/N)-1
     
     excess_return = rets - rf_per_period
     
